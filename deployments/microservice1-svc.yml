@@ -22,12 +22,12 @@ spec:
         run: microservice1-svc
     spec:
       containers:
-      - image: docker.io/usuario/microservice1
+      - image: docker.io/depaniagua/microservice1
         imagePullPolicy: IfNotPresent
         name: microservice1-svc
          env:
         - name: API_QUEUE
-          value: "RABBIT_IP"
+          value: "192.168.50.4"
         ports:
         - containerPort: 3010
       dnsPolicy: ClusterFirst
