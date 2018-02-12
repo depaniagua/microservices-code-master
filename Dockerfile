@@ -1,6 +1,6 @@
 FROM node:6.9.2
 EXPOSE 3010 
 COPY package.json .
-COPY microservice1.js .
+COPY microservice2.js .
 RUN npm install
-CMD node microservice1.js
+CMD node microservice2.js
