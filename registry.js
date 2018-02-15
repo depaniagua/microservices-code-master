@@ -1,13 +1,13 @@
 var requestify     = require("requestify");
 	
-const apiGatewayUrl = "http://" + API_GATEWAY + "/apps";
+const apiGatewayUrl = "http://" + "192.168.50.4:32161" + "/apps";
 console.log("Registering microservice 1 " + apiGatewayUrl);
 requestify.request(apiGatewayUrl, {
     method: "POST",
     body: {
         "appName": "microservicio1",
-        "hostName": "ip_microservicio1",
-        "port": port_microservicio1,
+        "hostName": "192.168.50.5",
+        "port": 30831,
         "service": "/microservicio1",
         "method": "GET"
     },
@@ -25,8 +25,8 @@ requestify.request(apiGatewayUrl, {
     method: "POST",
     body: {
         "appName": "microservicio2",
-        "hostName": "ip_microservicio2",
-        "port": port_microservicio2,
+        "hostName": "192.168.50.5",
+        "port": 30747,
         "service": "/microservicio2",
         "method": "GET"
     },
