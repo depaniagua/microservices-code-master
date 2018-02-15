@@ -22,14 +22,14 @@ spec:
         run: microservice1-svc
     spec:
       containers:
-      - image: docker.io/depaniagua/microservice1
-        imagePullPolicy: IfNotPresent
-        name: microservice1-svc
-         env:
-        - name: API_QUEUE
-          value: "192.168.50.4"
-        ports:
-        - containerPort: 3010
+        - name: microservice1-svc
+          image: docker.io/depaniagua/microservice1
+          imagePullPolicy: IfNotPresent
+          env:
+          - name: API_QUEUE
+            value: "192.168.50.4"
+          ports:
+          - containerPort: 3010
       dnsPolicy: ClusterFirst
       restartPolicy: Always
 ---
